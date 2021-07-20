@@ -1,0 +1,280 @@
+{
+  "students": [
+      {
+          "id": 2,
+          "studName": "Rahul Kumar",
+          "studClass": "MCA",
+          "studSection": "A",
+          "studSubjects": [
+              {
+                  "computerScience": "78"
+              },
+              {
+                  "mathematics": "70"
+              },
+              {
+                  "programingC": "90"
+              },
+              { 
+                  "database": "89"
+              },
+              {
+                  "java": "76"
+              }
+          ]
+      },
+      {
+          "id": 1,
+          "studName": "Rohit Kumar",
+          "studClass": "BBA",
+          "studSection": "B",
+          "studSubjects": [
+              {
+                  "computerScience": "72"
+              },
+              {
+                  "mathematics": "68"
+              },
+              {
+                  "programingC": "87"
+              },
+              { 
+                  "database": "97"
+              },
+              {
+                  "java": "55"
+              }
+          ]
+      },
+      {
+          "id": 4,
+          "studName": "Amit Kumar",
+          "studClass": "MBA",
+          "studSection": "A",
+          "studSubjects": [              
+              {
+                  "computerScience": "52"
+              },
+              {
+                  "mathematics": "91"
+              },
+              {
+                  "programingC": "70"
+              },
+              { 
+                  "database": "72"
+              },
+              {
+                  "java": "96"
+              }
+          ]
+      },
+      {
+          "id": 3,
+          "studName": "Neha Agarwal",
+          "studClass": "BCA",
+          "studSection": "B",
+          "studSubjects": [
+              {
+                  "computerScience": "68"
+              },
+              {
+                  "mathematics": "90"
+              },
+              {
+                  "programingC": "91"
+              },
+              { 
+                  "database": "79"
+              },
+              {
+                  "java": "66"
+              }
+          ]
+      },
+      {
+        "id": 12,
+        "studName": "Dharmendra Kumar",
+        "studClass": "MBA",
+        "studSection": "A",
+        "studSubjects": [
+            {
+                "computerScience": "78"
+            },
+            {
+                "mathematics": "70"
+            },
+            {
+                "programingC": "90"
+            },
+            { 
+                "database": "89"
+            },
+            {
+                "java": "76"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "studName": "Ankit Arrora",
+        "studClass": "BBA",
+        "studSection": "A",
+        "studSubjects": [
+            {
+                "computerScience": "72"
+            },
+            {
+                "mathematics": "68"
+            },
+            {
+                "programingC": "87"
+            },
+            { 
+                "database": "97"
+            },
+            {
+                "java": "55"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "studName": "Prannoy Arrora",
+        "studClass": "MBA",
+        "studSection": "A",
+        "studSubjects": [              
+            {
+                "computerScience": "52"
+            },
+            {
+                "mathematics": "91"
+            },
+            {
+                "programingC": "70"
+            },
+            { 
+                "database": "72"
+            },
+            {
+                "java": "96"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "studName": "Meenu Agarwal",
+        "studClass": "BCA",
+        "studSection": "B",
+        "studSubjects": [
+            {
+                "computerScience": "68"
+            },
+            {
+                "mathematics": "90"
+            },
+            {
+                "programingC": "91"
+            },
+            { 
+                "database": "79"
+            },
+            {
+                "java": "66"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "studName": "Jitendra Kumar",
+        "studClass": "BBA",
+        "studSection": "A",
+        "studSubjects": [
+            {
+                "computerScience": "78"
+            },
+            {
+                "mathematics": "70"
+            },
+            {
+                "programingC": "90"
+            },
+            { 
+                "database": "89"
+            },
+            {
+                "java": "76"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "studName": "Sachin Kumar",
+        "studClass": "BCA",
+        "studSection": "B",
+        "studSubjects": [
+            {
+                "computerScience": "72"
+            },
+            {
+                "mathematics": "68"
+            },
+            {
+                "programingC": "87"
+            },
+            { 
+                "database": "97"
+            },
+            {
+                "java": "55"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "studName": "Amit Kumar",
+        "studClass": "MBA",
+        "studSection": "A",
+        "studSubjects": [              
+            {
+                "computerScience": "52"
+            },
+            {
+                "mathematics": "91"
+            },
+            {
+                "programingC": "70"
+            },
+            { 
+                "database": "72"
+            },
+            {
+                "java": "96"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "studName": "Bhupendra Kumar",
+        "studClass": "MCA",
+        "studSection": "B",
+        "studSubjects": [
+            {
+                "computerScience": "68"
+            },
+            {
+                "mathematics": "90"
+            },
+            {
+                "programingC": "91"
+            },
+            { 
+                "database": "79"
+            },
+            {
+                "java": "66"
+            }
+        ]
+    }
+  ]
+}
