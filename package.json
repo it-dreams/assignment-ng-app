@@ -3,17 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run serve:ssr",
     "client": "npm start",
-    "build": "ng build",
+    "build": "npm run build:ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "dev": "concurrently \"npm run client\" \"npm run json:server\"",
     "dev:ssr": "concurrently \"ng run assignment-ng-app:serve-ssr\" \"npm run json:server\"",
     "serve:ssr": "node dist/ngAssignment-II/server/main.js",
     "build:ssr": "ng build && ng run ngAssignment-II:server",
     "json:server": "json-server --watch db.json",
-    "prerender": "ng run ngAssignment-II:prerender",
-    "dev": "concurrently \"npm run client\" \"npm run json:server\""
+    "prerender": "ng run ngAssignment-II:prerender"
   },
   "private": true,
   "dependencies": {
