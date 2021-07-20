@@ -1,0 +1,41 @@
+@import '../../../../assets/scss/global.scss';
+
+.count-down {
+    border: 1px solid#333;
+    height: 250px;
+    padding: 20px;
+}
+
+.timer-control {
+    border: 1px solid#333;
+    height: 250px;
+    padding: 20px;
+}
+
+.timer-logs {
+    display: flex;
+    flex-direction: column;
+    padding: $mediam;
+}
+
+.control-history {
+    display: flex;
+    flex-direction: row;
+    padding: $mediam;
+
+    .started, .paused {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 $xxlarge;
+        
+        span:nth-child(1) {
+            font-size: $large;
+            font-weight: bold;
+        }
+        
+        span:nth-child(2) {
+            font-size: $base18;
+        }
+    }
+}

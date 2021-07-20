@@ -1,0 +1,13 @@
+<div class="container margin-top-mediam">
+        <!-- repeated DIV from HTML -->
+        <!-- <div class="column" *ngFor="let item of ' '.repeat(100).split(''), let i = index">
+            <app-button backgroundColor="blue" color="white" text="Button {{ i+1 }}" (btnClick)="clickedDiv(i)"></app-button>
+        </div> -->
+
+        <!-- Repeated DIV from Component -->
+        <cdk-virtual-scroll-viewport itemSize="10" class="viewport">
+            <div class="column" *cdkVirtualFor="let n of repeatedDiv(1000); let i = index;">
+                <app-button backgroundColor="blue" color="white" text="Button {{ i+1 }}" (btnClick)="clickedDiv(i)"></app-button>
+            </div>
+        </cdk-virtual-scroll-viewport>
+</div>

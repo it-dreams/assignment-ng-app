@@ -1,0 +1,14 @@
+@import '../assets/scss/global.scss';
+
+header {
+    font-family: $open-sans;
+}
+
+.main-container {
+    min-height: calc(100vh - 132px);
+    font-family: $open-sans;
+}
+
+footer {
+    font-family: $open-sans;
+}

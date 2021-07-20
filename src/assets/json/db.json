@@ -1,0 +1,64 @@
+{
+    "Students": [
+        {
+            "id": 1,
+            "studName": "Rahul Kumar",
+            "studClass": "MCA",
+            "studSection": "A",
+            "studSubjects": [
+                {
+                    "Computer Science": "78", 
+                    "Mathematics": "70", 
+                    "Programing C++": "90", 
+                    "Database": "89", 
+                    "Java": "76"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "studName": "Rohit Kumar",
+            "studClass": "BBA",
+            "studSection": "B",
+            "studSubjects": [
+                {
+                    "Computer Science": "72", 
+                    "Mathematics": "68", 
+                    "Programing C++": "87", 
+                    "Database": "97", 
+                    "Java": "56"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "studName": "Amit Kumar",
+            "studClass": "MBA",
+            "studSection": "A",
+            "studSubjects": [
+                {
+                    "Computer Science": "60", 
+                    "Mathematics": "90", 
+                    "Programing C++": "70", 
+                    "Database": "79", 
+                    "Java": "96"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "studName": "Neha Agarwal",
+            "studClass": "BCA",
+            "studSection": "B",
+            "studSubjects": [
+                {
+                    "Computer Science": "68", 
+                    "Mathematics": "90", 
+                    "Programing C++": "91", 
+                    "Database": "79", 
+                    "Java": "66"
+                }
+            ]
+        }
+    ]
+}

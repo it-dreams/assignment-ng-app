@@ -1,0 +1,46 @@
+<div class="container timer-limit">
+    <!-- <table>
+        <tr>
+            <td>
+                <label>Enter Timer Limit</label>
+            </td>
+            <td>
+                <app-input></app-input>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <app-button backgroundColor="green" color="white" text="Start/Pause"></app-button>
+                <app-button backgroundColor="green" color="white" text="Reset"></app-button>
+            </td>
+        </tr>
+    </table> -->
+    <div class="row">
+        <div class="col-md-10 ">
+            <div class="row set-limit">
+                <div class="col-md-4">
+                    <label for="">Enter Timer Limit</label>
+                </div>
+                <div class="col-md-8">                        
+                    <form>
+                        <app-input type="text" name="setTimerValue" [(ngModel)]="setTimerValue" placeholder="Enter Timer Limit" inputStyle="ss"></app-input> 
+                        {{setTimerValue}}
+                    </form>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8 start-stop">
+                    <app-button backgroundColor="green" color="white" [text]="timerState" (btnClick)= "clickStart()" [btnClass]="'start-timer'"></app-button>
+                    <app-button backgroundColor="red" color="white" text="Reset" (btnClick)="clickReset()"></app-button>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="paused-history">
+        <span>Paused at {{ pausedValue }}</span>
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+.viewport {
+    height: 500px;
+    width: 100%;
+}
+
+.column {
+    width: 200px;
+    height: 200px;
+    border: 1px solid#333;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    float: left;
+}

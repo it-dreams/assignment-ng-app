@@ -1,0 +1,22 @@
+@import '../../../../assets/scss/global.scss';
+
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    span:nth-child(1) {
+        font-size: 80px;
+        font-weight: bold;
+        color: orange;
+        border-bottom: 6px solid orange;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    span:nth-child(2) {
+        font-size: $large;
+    }
+}

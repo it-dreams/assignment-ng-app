@@ -1,0 +1,54 @@
+@import '../../../../../assets/scss/global.scss';
+
+.timer-limit {
+    padding: $base;
+
+    .set-limit {
+        label {
+            position: relative;
+            top: 5px;
+        }
+    }
+
+    .start-stop {
+        margin-top: 5px;
+
+        app-button {
+            margin-right: 10px;
+        }
+        
+        .start-timer {
+            width: 111px;
+        }
+    }
+
+    .paused-history {
+        display: flex;
+        flex-direction: column;
+        margin-top: $xlarge;
+        overflow-y: auto;
+        height: 89px;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+         
+        /* Track */
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+         
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            // background: rgba(255,0,0,0.8); 
+            -webkit-box-shadow: inset 0 0 6px rgba(56, 56, 56, 0.5); 
+        }
+        // ::-webkit-scrollbar-thumb:window-inactive {
+        //     // background: rgba(255,0,0,0.4); 
+        // }
+    }
+}

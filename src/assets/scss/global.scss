@@ -1,0 +1,20 @@
+// Importing all scss files
+@import './variable.scss';
+@import './mixin.scss';
+
+
+// Reset CSS
+
+// margin
+.margin-small { margin: $small; }
+.margin-mediam { margin: $mediam; }
+
+.margin-top-small { margin-top: $small; }
+.margin-top-mediam { margin-top: $mediam; }
+
+.margin-bottom-small { margin-bottom: $small; }
+.margin-bottom-mediam { margin-bottom: $mediam; }
+
+// positions
+.left { float: left; }
+.right { float: right; }
