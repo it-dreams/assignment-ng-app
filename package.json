@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run ngAssignment-II:serve-ssr",
+    "dev:ssr": "concurrently \"ng run assignment-ng-app:serve-ssr\" \"npm run json:server\"",
     "serve:ssr": "node dist/ngAssignment-II/server/main.js",
     "build:ssr": "ng build && ng run ngAssignment-II:server",
     "json:server": "json-server --watch db.json",
