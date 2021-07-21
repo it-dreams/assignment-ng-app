@@ -1,6 +1,21 @@
 .viewport {
     height: 500px;
     width: 100%;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 12px rgba(124, 120, 120, 0.3); 
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+        background: rgba(60, 179, 113,0.8); 
+        -webkit-box-shadow: inset 0 0 6px rgba(71, 67, 67, 0.5); 
+    }
 }
 
 .column {
@@ -13,4 +28,5 @@
     align-items: center;
     flex-wrap: wrap;
     float: left;
+    -webkit-box-shadow: inset 0 0 6px rgba(71, 67, 67, 0.5); 
 }
