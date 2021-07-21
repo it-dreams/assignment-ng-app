@@ -14,6 +14,12 @@
 }
 .price-filter {
     margin: $mediam $base18 $small 0;
+
+    #priceFilter {
+        width: 180px;
+        padding: 9px;
+        border-radius: 7px;
+    }
 }
 
 .product-box {

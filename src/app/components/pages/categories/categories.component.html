@@ -7,21 +7,15 @@
                     <app-image [imgUrl]="iconList" name="list" [iconClass]="iconStyle" (iconClick)="changeList()"></app-image>
                 </div>                                  
                 <div class="price-filter">
-                    <div ngbDropdown class="d-inline-block">
+                    <!-- <div ngbDropdown class="d-inline-block">
                         <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                          <button ngbDropdownItem>Price $0 - $500</button>
-                          <button ngbDropdownItem>Price $501 - $1000</button>
-                          <button ngbDropdownItem>Price $1001 - $1500</button>
-                          <button ngbDropdownItem>Price $1501 - $2000</button>
-                          <button ngbDropdownItem>Price $2001 - $2500</button>
-                          <button ngbDropdownItem>Price $2501 - $3000</button>
-                          <button ngbDropdownItem>Price $3001 - $3500</button>
-                          <button ngbDropdownItem>Price $3501 - $4000</button>
-                          <button ngbDropdownItem>Price $4001 - $4500</button>
-                          <button ngbDropdownItem>Price $4501 - $5000</button>
-                        </div>
-                    </div>
+                          $0 - $500, $501 - $1000, $1001 - $1500, $1501 - $2000, $2001 - $2500, $2501 - $3000, $3001 - $3500, $3501 - $4000, $4001 - $4500,$4501 - $5000,                        </div>
+                    </div> -->
+                    <select name="priceFilter" id="priceFilter">
+                        <option  value="0">Select Price</option>
+                        <option  *ngFor="let item of priceFilter" [value]="item">{{item}}</option>
+                    </select>
                 </div>                       
             </div>
         </div>

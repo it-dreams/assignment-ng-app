@@ -14,10 +14,10 @@ export class CategoriesComponent implements OnInit {
   iconList = '../../../../assets/img/list10-10.png';
   iconStyle: string = 'view-icon';
   btnStyle: string = 'add-cart';
-
   layoutStyle: string = 'product-grid' || 'product-list';
-
   products: Product[] = PRODUCTS;
+
+  priceFilter = ['$0 - $500', '$501 - $1000', '$1001 - $1500', '$1501 - $2000', '$2001 - $2500', '$2501 - $3000', '$3001 - $3500', '$3501 - $4000', '$4001 - $4500', '$4501 - $5000'];
 
   constructor() { }
 
