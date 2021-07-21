@@ -8,11 +8,12 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  @Input() type: string | undefined;
-  @Input() name: string | undefined;
-  @Input() value: string | undefined;
-  @Input() placeholder: string | undefined;
-  @Input() inputStyle: string | undefined;
+  @Input() type: string;
+  @Input() name: string;
+  @Input() value: string;
+  @Input() ngModel: number;
+  @Input() placeholder: string;
+  @Input() inputStyle: string;
 
   constructor() { }
 

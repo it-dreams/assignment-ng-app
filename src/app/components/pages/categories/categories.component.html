@@ -10,16 +10,16 @@
                     <div ngbDropdown class="d-inline-block">
                         <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                          <button ngbDropdownItem>Price $0 - $50</button>
-                          <button ngbDropdownItem>Price $51 - $100</button>
-                          <button ngbDropdownItem>Price $101 - $150</button>
-                          <button ngbDropdownItem>Price $151 - $200</button>
-                          <button ngbDropdownItem>Price $201 - $250</button>
-                          <button ngbDropdownItem>Price $251 - $300</button>
-                          <button ngbDropdownItem>Price $301 - $350</button>
-                          <button ngbDropdownItem>Price $351 - $400</button>
-                          <button ngbDropdownItem>Price $401 - $450</button>
-                          <button ngbDropdownItem>Price $451 - $500</button>
+                          <button ngbDropdownItem>Price $0 - $500</button>
+                          <button ngbDropdownItem>Price $501 - $1000</button>
+                          <button ngbDropdownItem>Price $1001 - $1500</button>
+                          <button ngbDropdownItem>Price $1501 - $2000</button>
+                          <button ngbDropdownItem>Price $2001 - $2500</button>
+                          <button ngbDropdownItem>Price $2501 - $3000</button>
+                          <button ngbDropdownItem>Price $3001 - $3500</button>
+                          <button ngbDropdownItem>Price $3501 - $4000</button>
+                          <button ngbDropdownItem>Price $4001 - $4500</button>
+                          <button ngbDropdownItem>Price $4501 - $5000</button>
                         </div>
                     </div>
                 </div>                       
@@ -32,9 +32,10 @@
                     <div class="product-details">
                         <span class="prod-name">{{item.name}}</span>
                         <small class="prod-category">{{item.category}}</small>
+                        <span class="prod-description"> {{item.description}} </span>
                         <span><strong>Price:</strong> {{item.price}}</span>
-                        <app-button backgroundColor="green" color="white" text="Add to Cart" 
-                        [btnClass]="btnStyle" (btnClick)="addCart()"></app-button>
+                        <app-button text="Add to Cart" 
+                        [btnClass]="btnStyle" [iconClass]="'fa fa-shopping-cart'" (btnClick)="addCart()"></app-button>
                     </div>
                 </div>              
             </div>

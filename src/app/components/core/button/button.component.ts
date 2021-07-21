@@ -7,10 +7,12 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } fro
   encapsulation: ViewEncapsulation.None
 })
 export class ButtonComponent implements OnInit {
-  @Input() text: string | undefined; 
-  @Input() backgroundColor: string | undefined; 
-  @Input() color: string | undefined; 
-  @Input() btnClass: string | undefined; 
+  @Input() text: string; 
+  @Input() backgroundColor: string; 
+  @Input() color: string; 
+  @Input() disabled: boolean; 
+  @Input() btnClass: string; 
+  @Input() iconClass: string; 
   @Output() btnClick= new EventEmitter();
 
   constructor() { }

@@ -8,9 +8,10 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } fro
 })
 export class TimerControlComponent implements OnInit {
 
-  @Input() timerState: string | undefined;
-  @Input() pausedValue: number | undefined;
-  @Input() setTimerValue: any;
+  @Input() timerState: string;
+  @Input() pausedValue: number[]= [];
+  @Input() setTimerValue: number = 0;
+  @Input() isDisabled: boolean = false;;
   @Output() start = new EventEmitter();
   @Output() reset = new EventEmitter();
 

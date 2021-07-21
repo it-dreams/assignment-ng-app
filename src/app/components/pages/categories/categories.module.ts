@@ -6,9 +6,9 @@ import { ImageComponent } from '../../core/image/image.component';
 
 @NgModule({
   declarations: [
-    CategoriesComponent,
-    ButtonComponent,
-    ImageComponent
+    // CategoriesComponent,
+    // ButtonComponent,
+    // ImageComponent
   ],
   imports: [
     CommonModule
