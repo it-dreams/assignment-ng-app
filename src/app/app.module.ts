@@ -24,6 +24,7 @@ import { CountDownComponent } from './components/pages/timer/count-down/count-do
 import { TimerControlComponent } from './components/pages/timer/timer-control/timer-control.component';
 import { InputComponent } from './components/core/input/input.component';
 import { DynamicClickComponent } from './components/pages/dynamic-click/dynamic-click.component';
+import { SubstringPipe } from './pipe/substring.pipe';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -52,7 +53,8 @@ const routes: Routes = [
     CountDownComponent,
     TimerControlComponent,
     InputComponent,
-    DynamicClickComponent
+    DynamicClickComponent,
+    SubstringPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
