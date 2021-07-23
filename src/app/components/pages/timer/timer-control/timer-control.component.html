@@ -8,11 +8,8 @@
                 <div class="col-md-8">                        
                     <form>
                         <!-- <app-input type="text" [(ngModel)]="name" (keyup)="click1()" [ngModelOptions]="{standalone: true}" placeholder="Enter Timer Limit"></app-input> -->
-                        <!-- <button (click)="setTimerLimit()">Send Data</button> -->
-                        <!-- {{name}} -->
 
-                        <input type="text" [(ngModel)]="limit" (keyup)="click1()" [ngModelOptions]="{standalone: true}"/>
-                        <!-- {{limit}} -->
+                        <input type="text" [(ngModel)]="limit" (keyup)="setTimerLimit()" [ngModelOptions]="{standalone: true}"/>
                     </form>
                 </div>
             </div> 

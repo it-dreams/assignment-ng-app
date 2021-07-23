@@ -10,17 +10,12 @@ export class TimerControlComponent implements OnInit {
 
   @Input() timerState: string;
   @Input() pausedValue: number[]= [];
+  @Input() limit: number;
   @Input() isDisabled: boolean = false;;
   @Output() start = new EventEmitter();
   @Output() reset = new EventEmitter();
-  // @Output() updatedValue = new EventEmitter<number>();
-  
-  
-  @Input() limit: number;
-  // @Output() updatedValue: EventEmitter<any> = new EventEmitter();
-
-  // @Input() name: string;
-  @Output() event: EventEmitter<any> = new EventEmitter();
+  @Output() updatedValue: EventEmitter<any> = new EventEmitter();
+   
 
   constructor() { }
 
@@ -34,12 +29,7 @@ export class TimerControlComponent implements OnInit {
     this.reset.emit();
   }
 
-  // setTimerLimit() {
-  //   this.updatedValue.emit(this.limit);
-  // }
-
-  click1() {
-    this.event.emit(this.limit);
+  setTimerLimit() {
+    this.updatedValue.emit(this.limit);
   }
-
 }

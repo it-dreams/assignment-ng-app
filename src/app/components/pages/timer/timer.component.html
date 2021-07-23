@@ -10,13 +10,7 @@
         </div>
         <div class="col-md-7">
             <div class="timer-control">
-                <app-timer-control (start)="changeState()" (reset)="resetState()" [timerState]="initialState" [pausedValue]="pausedTime" (event)=childEvent($event)></app-timer-control>
-
-                <!-- <app-timer-control (start)="changeState()" (reset)="resetState()" [timerState]="initialState" [pausedValue]="pausedTime" (updatedValue)=recivedTimerValue($event)></app-timer-control> -->
-                
-                
-                <!-- <input type="text" [(ngModel)]="initialTimer"> -->
-                <!-- {{initialTimer}} -->
+                <app-timer-control (start)="changeState()" (reset)="resetState()" [timerState]="initialState" [pausedValue]="pausedTime" (updatedValue)=setLimit($event)></app-timer-control>
             </div>
         </div>
     </div>
