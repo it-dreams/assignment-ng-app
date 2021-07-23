@@ -5,11 +5,18 @@
         <div class="col-md-5">
             <div class="count-down">
                 <app-count-down [initialCountDown]="currentTimer"></app-count-down>
+                <!-- <app-count-down [name]="initialTimer"></app-count-down> -->
             </div>                      
         </div>
         <div class="col-md-7">
             <div class="timer-control">
-                <app-timer-control (reset)="resetState()" (start)="changeState()" [timerState]="initialState" [pausedValue]="pausedTime" [setTimerValue]="currentTimer" [isDisabled]= "isDisabled"></app-timer-control>
+                <app-timer-control (start)="changeState()" (reset)="resetState()" [timerState]="initialState" [pausedValue]="pausedTime" (event)=childEvent($event)></app-timer-control>
+
+                <!-- <app-timer-control (start)="changeState()" (reset)="resetState()" [timerState]="initialState" [pausedValue]="pausedTime" (updatedValue)=recivedTimerValue($event)></app-timer-control> -->
+                
+                
+                <!-- <input type="text" [(ngModel)]="initialTimer"> -->
+                <!-- {{initialTimer}} -->
             </div>
         </div>
     </div>

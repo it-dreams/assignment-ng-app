@@ -9,6 +9,10 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 export class CountDownComponent implements OnInit {
   @Input() initialCountDown: number;
 
+
+  // @Input() name: string;
+ //  @Output() event: EventEmitter<any> = new EventEmitter();
+  
   constructor() { }
 
   ngOnInit(): void {

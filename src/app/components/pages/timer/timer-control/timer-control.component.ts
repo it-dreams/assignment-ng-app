@@ -10,15 +10,21 @@ export class TimerControlComponent implements OnInit {
 
   @Input() timerState: string;
   @Input() pausedValue: number[]= [];
-  @Input() setTimerValue: number = 0;
   @Input() isDisabled: boolean = false;;
   @Output() start = new EventEmitter();
   @Output() reset = new EventEmitter();
+  // @Output() updatedValue = new EventEmitter<number>();
+  
+  
+  @Input() limit: number;
+  // @Output() updatedValue: EventEmitter<any> = new EventEmitter();
+
+  // @Input() name: string;
+  @Output() event: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   clickStart() {
     this.start.emit();
@@ -26,6 +32,14 @@ export class TimerControlComponent implements OnInit {
 
   clickReset() {
     this.reset.emit();
+  }
+
+  // setTimerLimit() {
+  //   this.updatedValue.emit(this.limit);
+  // }
+
+  click1() {
+    this.event.emit(this.limit);
   }
 
 }

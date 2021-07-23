@@ -9,10 +9,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class TimerComponent implements OnInit {
   startCount: number = 0;
   pausedCount: number = 0;
-  initialTimer: number = 1000;
-  // initialDate: Date = new Date();
+  // initialTimer: number = 1000;
   resetTime: number;
-  currentTimer = this.initialTimer;
+  // currentTimer = this.initialTimer;
   latestDate: Date[] = [];
   pausedTime: number[] = [];
 
@@ -21,6 +20,9 @@ export class TimerComponent implements OnInit {
   initialState = 'Start' || 'Pause';
   isComplete: boolean = false;
   isDisabled: boolean = false;
+
+  initialTimer: number = 100;
+  currentTimer = this.initialTimer;
 
   constructor() { }
 
@@ -75,6 +77,16 @@ export class TimerComponent implements OnInit {
     this.pausedTime = [];
     this.startCount = 0;
     this.pausedCount = 0;
+  }
+
+  recivedTimerValue($event) {
+    this.initialTimer = $event;
+  }
+
+  
+  // name = 'Angular';
+  childEvent($event){
+    this.initialTimer = $event;
   }
 
 }

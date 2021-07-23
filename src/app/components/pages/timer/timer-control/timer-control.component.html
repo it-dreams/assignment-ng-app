@@ -7,7 +7,12 @@
                 </div>
                 <div class="col-md-8">                        
                     <form>
-                        <app-input type="text" name="setTimerValue" [ngModel]="setTimerValue" placeholder="Enter Timer Limit" inputStyle="ss"></app-input>
+                        <!-- <app-input type="text" [(ngModel)]="name" (keyup)="click1()" [ngModelOptions]="{standalone: true}" placeholder="Enter Timer Limit"></app-input> -->
+                        <!-- <button (click)="setTimerLimit()">Send Data</button> -->
+                        <!-- {{name}} -->
+
+                        <input type="text" [(ngModel)]="limit" (keyup)="click1()" [ngModelOptions]="{standalone: true}"/>
+                        <!-- {{limit}} -->
                     </form>
                 </div>
             </div> 
