@@ -7,9 +7,9 @@
                 </div>
                 <div class="col-md-8">                        
                     <form>
-                        <!-- <app-input type="text" [(ngModel)]="name" (keyup)="click1()" [ngModelOptions]="{standalone: true}" placeholder="Enter Timer Limit"></app-input> -->
+                        <!-- <app-input type="text" [(ngModel)]="name" (keyup)="setTimerLimit()" [ngModelOptions]="{standalone: true}" placeholder="Enter Timer Limit"></app-input> -->
 
-                        <input type="text" [(ngModel)]="limit" (keyup)="setTimerLimit()" [ngModelOptions]="{standalone: true}"/>
+                        <input type="text" [(ngModel)]="limit" (keyup)="setTimerLimit()" [ngModelOptions]="{standalone: true}" placeholder="Enter Timer Limit"/>
                     </form>
                 </div>
             </div> 
