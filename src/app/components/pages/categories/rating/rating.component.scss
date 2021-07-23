@@ -1,0 +1,13 @@
+.crop{
+    overflow: hidden;
+    .rating-width{
+        cursor: pointer;
+        width: 100px;
+
+        .fa-star {
+            &::before {
+                color:orange;
+            }
+        }
+    }
+}

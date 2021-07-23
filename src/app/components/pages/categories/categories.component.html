@@ -7,11 +7,6 @@
                     <app-image [imgUrl]="iconList" name="list" [iconClass]="iconStyle" (iconClick)="changeList()"></app-image>
                 </div>                                  
                 <div class="price-filter">
-                    <!-- <div ngbDropdown class="d-inline-block">
-                        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
-                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                          $0 - $500, $501 - $1000, $1001 - $1500, $1501 - $2000, $2001 - $2500, $2501 - $3000, $3001 - $3500, $3501 - $4000, $4001 - $4500,$4501 - $5000,                        </div>
-                    </div> -->
                     <select name="priceFilter" id="priceFilter">
                         <option  value="0">Select Price</option>
                         <option  *ngFor="let item of priceFilter" [value]="item">{{item}}</option>
@@ -27,7 +22,10 @@
                         <span class="prod-name">{{item.name}}</span>
                         <small class="prod-category">{{item.category}}</small>
                         <span class="prod-description"> {{item.description | substring: 52}} </span>
-                        <span><strong>Price:</strong> {{item.price}}</span>
+                        <div class="price-rating"> 
+                            <span><strong>Price:</strong> {{item.price}}</span>
+                            <app-rating [rating]='item.rating'></app-rating> <strong>{{item.rating}}</strong>
+                        </div>
                         <app-button text="Add to Cart" 
                         [btnClass]="btnStyle" [iconClass]="'fa fa-shopping-cart'" (btnClick)="addCart()"></app-button>
                     </div>
