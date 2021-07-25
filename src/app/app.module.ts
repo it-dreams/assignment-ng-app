@@ -31,6 +31,7 @@ import { PageNotFoundComponent } from './components/pages/page-not-found/page-no
 
 // Custom Pipe
 import { SubstringPipe } from './pipe/substring.pipe';
+import { DiscountPipe } from './pipe/discount.pipe';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -63,7 +64,8 @@ const routes: Routes = [
     StudentsComponent,
     DynamicClickComponent,
     PageNotFoundComponent,
-    SubstringPipe // Custom pipe
+    SubstringPipe, // Custom pipe
+    DiscountPipe // Custom pipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
