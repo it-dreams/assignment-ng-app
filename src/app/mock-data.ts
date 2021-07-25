@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
         price: 600,
         imgUrl: '../assets/img/dummy-product.jpg',
         rating: 5,
-        discount: 10
+        discount: 50
     },
     {
         id: 7,
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
         price: 800,
         imgUrl: '../assets/img/dummy-product.jpg',
         rating: 3,
-        discount: 10
+        discount: 70
     },
     {
         id: 9,

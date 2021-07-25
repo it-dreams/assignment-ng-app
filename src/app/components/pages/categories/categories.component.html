@@ -31,8 +31,8 @@
                         <small class="prod-category">{{item.category}}</small>
                         <span class="prod-description"> {{item.description | substring: 52}} </span>
                         <div class="price-rating"> 
-                            <!-- <span><strong>Price:</strong> {{item.price | discount: 20 |currency:'USD':true:'1.0-0'}}</span> -->
-                            <span><strong>Price:</strong> ${{item.price | discount: item.discount}}</span>
+                            <!-- <span><strong>Price:</strong> {{item.price | discount: '20' |currency:'USD':true:'1.0-0'}}</span> -->
+                            <span [title]="item.discount"><strong>Price:</strong> ${{item.price | discount: item.discount}} <em><del>{{item.price}}</del></em></span>
                             <app-rating [rating]='item.rating'></app-rating> <strong>{{item.rating}}</strong>
                         </div>
                         <app-button text="Add to Cart" 

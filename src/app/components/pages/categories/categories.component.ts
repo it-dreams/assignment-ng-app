@@ -21,7 +21,7 @@ export class CategoriesComponent implements OnInit {
   selectedValue: Product[] = [];
 
   // priceFilter = ['$0 - $500', '$501 - $1000', '$1001 - $1500', '$1501 - $2000', '$2001 - $2500', '$2501 - $3000', '$3001 - $3500', '$3501 - $4000', '$4001 - $4500', '$4501 - $5000'];
-  priceFilter = ['Sorting by Lowest Price', 'Sorting by Highest Price', 'Sorting by Default']; 
+  priceFilter = ['Sorting by Lowest Price', 'Sorting by Highest Price', 'Sorting by Highest Discount', 'Sorting by Highest Rating', 'Sorting by Default']; 
   // priceFilter = this.products.map(x => x.price +'-'+ (x.price + 500));
 
 
@@ -55,6 +55,14 @@ export class CategoriesComponent implements OnInit {
       } 
       case 2: { 
           this.selectedValue = this.products.sort((a: any, b: any) => b.price - a.price); 
+          break; 
+      }
+      case 3: { 
+          this.selectedValue = this.products.sort((a: any, b: any) => b.discount - a.discount); 
+          break; 
+        }
+        case 4: { 
+          this.selectedValue = this.products.sort((a: any, b: any) => b.rating - a.rating); 
           break; 
       } 
       default: { 
