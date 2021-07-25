@@ -15,7 +15,7 @@
 .price-filter {
     margin: $mediam $base18 $small 0;
 
-    #priceFilter {
+    #mySelect {
         width: 180px;
         padding: 6.8px;
         border-radius: 7px;
@@ -125,12 +125,18 @@
                 margin-bottom: 7px;
             }
 
+            .price-rating {
+                display: flex;
+                justify-content: space-between;
+            }
+            
             .add-cart {
                 margin-top: 15px;
                 padding: 6px 30px;
                 background-color: #ffffff;
                 color: #3ba53b;
                 border: 1px solid#3ba53b;
+                width: 100%;
 
                 &:hover {
                     background-color: #3ba53b;

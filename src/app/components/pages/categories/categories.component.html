@@ -5,12 +5,20 @@
                 <div class="product-view">
                     <app-image [imgUrl]="iconGrid" name="grid" [iconClass]="iconStyle" (iconClick)="changeGrid()"></app-image>
                     <app-image [imgUrl]="iconList" name="list" [iconClass]="iconStyle" (iconClick)="changeList()"></app-image>
-                </div>                                  
+                </div>
                 <div class="price-filter">
-                    <select name="priceFilter" id="priceFilter">
-                        <option  value="0">Select Price</option>
-                        <option  *ngFor="let item of priceFilter" [value]="item">{{item}}</option>
+                    <select id="mySelect" (change)="selectChange($event)">
+                        <option [ngValue]="0">Select Sorting Option...</option>
+                        <option *ngFor="let item of priceFilter" [ngValue]="item">{{item}}</option>
                     </select>
+                    
+                    <!-- <select id="mySelect" [(ngModel)]="mySelect" (change)="selectChange($event)">
+                        <option [ngValue]="0" selected>Select Price</option>
+                        <option [ngValue]="item" *ngFor="let item of priceFilter">
+                            {{item}}
+                        </option>
+                    </select> -->
+                    <!-- Selected: {{mySelect | json}} -->
                 </div>                       
             </div>
         </div>
@@ -23,7 +31,7 @@
                         <small class="prod-category">{{item.category}}</small>
                         <span class="prod-description"> {{item.description | substring: 52}} </span>
                         <div class="price-rating"> 
-                            <span><strong>Price:</strong> {{item.price}}</span>
+                            <span><strong>Price:</strong> {{item.price | currency:'USD':true:'1.0-0'}}</span>
                             <app-rating [rating]='item.rating'></app-rating> <strong>{{item.rating}}</strong>
                         </div>
                         <app-button text="Add to Cart" 

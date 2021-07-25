@@ -2,6 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
@@ -10,22 +11,23 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 
 // Components
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/pages/home/home.component';
-import { CategoriesComponent } from './components/pages/categories/categories.component';
-import { TimerComponent } from './components/pages/timer/timer.component';
-import { Timer2Component } from './components/pages/timer2/timer2.component';
-import { StudentsComponent } from './components/pages/students/students.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { ButtonComponent } from './components/core/button/button.component';
 import { ImageComponent } from './components/core/image/image.component';
+import { InputComponent } from './components/core/input/input.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { CategoriesComponent } from './components/pages/categories/categories.component';
+import { RatingComponent } from './components/pages/categories/rating/rating.component';
+import { TimerComponent } from './components/pages/timer/timer.component';
 import { CountDownComponent } from './components/pages/timer/count-down/count-down.component';
 import { TimerControlComponent } from './components/pages/timer/timer-control/timer-control.component';
-import { InputComponent } from './components/core/input/input.component';
+import { Timer2Component } from './components/pages/timer2/timer2.component';
+import { CountDownTimerComponent } from './components/pages/timer2/count-down-timer/count-down-timer.component';
+import { TimerControllerComponent } from './components/pages/timer2/timer-controller/timer-controller.component';
+import { StudentsComponent } from './components/pages/students/students.component';
 import { DynamicClickComponent } from './components/pages/dynamic-click/dynamic-click.component';
-import { RatingComponent } from './components/pages/categories/rating/rating.component';
+import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 
 // Custom Pipe
 import { SubstringPipe } from './pipe/substring.pipe';
@@ -44,22 +46,24 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    CategoriesComponent,
-    TimerComponent,
-    Timer2Component,
-    StudentsComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent,
     ButtonComponent,
     ImageComponent,
+    InputComponent,
+    HomeComponent,
+    CategoriesComponent,
+    RatingComponent,
+    TimerComponent,
     CountDownComponent,
     TimerControlComponent,
-    InputComponent,
+    Timer2Component,
+    CountDownTimerComponent,
+    TimerControllerComponent,
+    StudentsComponent,
     DynamicClickComponent,
-    RatingComponent,
-    SubstringPipe
+    PageNotFoundComponent,
+    SubstringPipe // Custom pipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
