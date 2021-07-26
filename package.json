@@ -1,22 +1,22 @@
 {
-  "name": "ng-assignment-ii",
+  "name": "assignment-ng-app",
   "version": "0.0.0",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run serve:ssr",
     "client": "npm start",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "build": "npm run build:ssr",
     "test": "ng test",
+    "watch": "ng build --watch --configuration development",
     "dev": "concurrently \"npm run client\" \"npm run json:server\"",
-    "dev:ssr": "concurrently \"ng run ngAssignment-II:serve-ssr\" \"npm run json:server\"",
-    "serve:ssr": "node dist/ngAssignment-II/server/main.js",
-    "build:ssr": "ng build && ng run ngAssignment-II:server",
+    "dev:ssr": "concurrently \"ng run assignment-ng-app:serve-ssr\" \"npm run json:server\"",
+    "serve:ssr": "node dist/assignment-ng-app/server/main.js",
+    "build:ssr": "ng build && ng run assignment-ng-app:server",
     "json:server": "json-server --watch db.json",
-    "prerender": "ng run ngAssignment-II:prerender"
+    "prerender": "ng run assignment-ng-app:prerender"
   },
   "private": true,
   "dependencies": {
