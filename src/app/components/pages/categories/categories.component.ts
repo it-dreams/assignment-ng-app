@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { PRODUCTS } from 'src/app/mock-data';
+import { PRODUCTS } from '../../../mock-data';
 import { Product } from '../../../IProduct';
 
 @Component({
