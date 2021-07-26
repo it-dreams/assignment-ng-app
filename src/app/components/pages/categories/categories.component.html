@@ -26,7 +26,7 @@
                     <div class="product-details">
                         <span class="prod-name">{{item.name}}</span>
                         <small class="prod-category">{{item.category}}</small>
-                        <span class="prod-description"> {{item.description}} </span>
+                        <span class="prod-description"> {{item.description | substring: 52}} </span>
                         <span><strong>Price:</strong> {{item.price}}</span>
                         <app-button text="Add to Cart" 
                         [btnClass]="btnStyle" [iconClass]="'fa fa-shopping-cart'" (btnClick)="addCart()"></app-button>

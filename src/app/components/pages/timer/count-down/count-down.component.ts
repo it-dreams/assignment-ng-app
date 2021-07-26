@@ -7,7 +7,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class CountDownComponent implements OnInit {
-  @Input() initialCountDown: number | undefined;
+  @Input() initialCountDown: number;
 
   constructor() { }
 
