@@ -6,33 +6,35 @@
 
         <!-- <app-input type="text" name="studName" inputStyle="form-control" placeholder="Enter student Name to Search" [(ngModel)]="studName" (ngModelChange)="search()"></app-input> -->
     </div>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th (click)="sort('id')"><span>ID <i class="fa fa-sort"></i></span></th>
-                <th (click)="sort('studName')"><span>Name <i class="fa fa-sort"></i></span></th>
-                <th (click)="sort('studClass')"><span>Class <i class="fa fa-sort"></i></span></th>
-                <th (click)="sort('studSection')"><span>Section <i class="fa fa-sort"></i></span></th>
-                <th>Computer Science</th>
-                <th>Mathematics</th>
-                <th>Programing C</th>
-                <th>Database</th>
-                <th>Java</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let stud of students | orderBy: key: reverse | paginate: {itemsPerPage: 5, currentPage: p};">
-                <td>{{ stud.id }}</td>
-                <td>{{ stud.studName }}</td>
-                <td>{{ stud.studClass }}</td>
-                <td>{{ stud.studSection }}</td>
-                <td>{{ stud.studSubjects[0].computerScience }}</td>
-                <td>{{ stud.studSubjects[1].mathematics }}</td>
-                <td>{{ stud.studSubjects[2].programingC }}</td>
-                <td>{{ stud.studSubjects[3].database }}</td>
-                <td>{{ stud.studSubjects[4].java }}</td>
-            </tr>
-        </tbody>
-    </table>    
+    <div class="student-table">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th (click)="sort('id')"><span>ID <i class="fa fa-sort"></i></span></th>
+                    <th (click)="sort('studName')"><span>Name <i class="fa fa-sort"></i></span></th>
+                    <th (click)="sort('studClass')"><span>Class <i class="fa fa-sort"></i></span></th>
+                    <th (click)="sort('studSection')"><span>Section <i class="fa fa-sort"></i></span></th>
+                    <th>Computer Science</th>
+                    <th>Mathematics</th>
+                    <th>Programing C</th>
+                    <th>Database</th>
+                    <th>Java</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stud of students | orderBy: key: reverse | paginate: {itemsPerPage: 5, currentPage: p};">
+                    <td>{{ stud.id }}</td>
+                    <td>{{ stud.studName }}</td>
+                    <td>{{ stud.studClass }}</td>
+                    <td>{{ stud.studSection }}</td>
+                    <td>{{ stud.studSubjects[0].computerScience }}</td>
+                    <td>{{ stud.studSubjects[1].mathematics }}</td>
+                    <td>{{ stud.studSubjects[2].programingC }}</td>
+                    <td>{{ stud.studSubjects[3].database }}</td>
+                    <td>{{ stud.studSubjects[4].java }}</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>   
     <pagination-controls (pageChange)="p = $event" class="right"></pagination-controls>
 </div>
