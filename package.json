@@ -15,7 +15,7 @@
     "dev": "concurrently \"npm run client\" \"npm run json:server\"",
     "dev:ssr": "concurrently \"ng run assignment-ng-app:serve-ssr\" \"npm run json:server\"",
     "serve:ssr": "node dist/assignment-ng-app/server/main.js",
-    "build:ssr": "ng build && ng run assignment-ng-app:server",
+    "build:ssr": "ng build --prod && ng run assignment-ng-app:server:production",
     "json:server": "json-server --watch db.json",
     "prerender": "ng run assignment-ng-app:prerender"
   },
