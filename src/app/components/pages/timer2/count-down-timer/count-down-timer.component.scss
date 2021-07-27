@@ -1,0 +1,17 @@
+@import '../../../../../assets/scss/global.scss';
+
+.count-timer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+
+    div:nth-child(1) {
+        font-size: $mediam;
+    }
+    div:nth-child(2) {
+        font-size: $xxlarge;
+        font-weight: bold;
+    }
+}

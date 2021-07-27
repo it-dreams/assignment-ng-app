@@ -20,13 +20,11 @@ export class TimerComponent implements OnInit {
   isComplete: boolean = false;
   isDisabled: boolean = false;
 
-
   constructor() { }
 
   ngOnInit() { }
 
   changeState() {
-    // this.isDisabled = true
     if(this.initialState == 'Start') {
       this.startTimer();    
       if(!this.startCount) {
@@ -51,7 +49,6 @@ export class TimerComponent implements OnInit {
     this.interval = setInterval(() => { 
       if (this.currentTimer > 0) {
         this.currentTimer = this.currentTimer - 1;
-        console.log(this.currentTimer);
         this.initialState = 'Pause';
       } else {
         this.initialState = 'Start';

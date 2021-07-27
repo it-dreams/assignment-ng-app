@@ -18,7 +18,7 @@
         }
         
         .start-timer {
-            width: 115px;
+            width: 115px ;
         }
     }
 
@@ -28,7 +28,6 @@
         margin-top: $xlarge;
         overflow-y: auto;
         height: 89px;
-        text-align: left;
 
         &::-webkit-scrollbar {
             width: 8px;

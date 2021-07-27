@@ -133,6 +133,11 @@
             .price-rating {
                 display: flex;
                 justify-content: space-between;
+
+                del {
+                    opacity: 0.8;
+                    color: #777;
+                }
             }
             
             .add-cart {

@@ -33,6 +33,9 @@ import { PageNotFoundComponent } from './components/pages/page-not-found/page-no
 import { SubstringPipe } from './pipe/substring.pipe';
 import { DiscountPipe } from './pipe/discount.pipe';
 
+// Services 
+import { Timer2Service } from './services/timer2.service';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -79,7 +82,7 @@ const routes: Routes = [
     NgxPaginationModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  providers: [],
+  providers: [Timer2Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

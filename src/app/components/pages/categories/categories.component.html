@@ -11,28 +11,23 @@
                         <option [ngValue]="0">Select Sorting Option...</option>
                         <option *ngFor="let item of priceFilter" [ngValue]="item">{{item}}</option>
                     </select>
-                    
-                    <!-- <select id="mySelect" [(ngModel)]="mySelect" (change)="selectChange($event)">
-                        <option [ngValue]="0" selected>Select Price</option>
-                        <option [ngValue]="item" *ngFor="let item of priceFilter">
-                            {{item}}
-                        </option>
-                    </select> -->
-                    <!-- Selected: {{mySelect | json}} -->
                 </div>                       
             </div>
         </div>
         <div class="col-md-12">
             <div class="product-box">
                 <div ngClass= {{layoutStyle}} *ngFor="let item of products">
-                    <img [src]="item.imgUrl" alt="">
+                    <img [src]="item.imgUrl" [alt]="item.name">
                     <div class="product-details">
                         <span class="prod-name">{{item.name}}</span>
                         <small class="prod-category">{{item.category}}</small>
                         <span class="prod-description"> {{item.description | substring: 52}} </span>
                         <div class="price-rating"> 
                             <!-- <span><strong>Price:</strong> {{item.price | discount: '20' |currency:'USD':true:'1.0-0'}}</span> -->
-                            <span [title]="item.discount"><strong>Price:</strong> ${{item.price | discount: item.discount}} <em><del>{{item.price}}</del></em></span>
+                            <span [title]="item.discount">
+                                <strong>Price:</strong> ${{item.price | discount: item.discount}} 
+                                <em><del>{{item.price}}</del></em>
+                            </span>
                             <app-rating [rating]='item.rating'></app-rating> <strong>{{item.rating}}</strong>
                         </div>
                         <app-button text="Add to Cart" 
