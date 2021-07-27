@@ -7,9 +7,9 @@ import { Component, OnInit, Input, Output, ViewEncapsulation, EventEmitter } fro
   encapsulation: ViewEncapsulation.None
 })
 export class ImageComponent implements OnInit {
-  @Input() imgUrl: string | undefined;
-  @Input() name: string | undefined;
-  @Input() iconClass: string | undefined;
+  @Input() imgUrl: string;
+  @Input() name: string;
+  @Input() iconClass: string;
   @Output() iconClick = new EventEmitter();
 
   constructor() { }
