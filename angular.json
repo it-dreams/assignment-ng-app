@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "assignment-ng-app": {
+    "ngAssignment-II": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/assignment-ng-app/browser",
+            "outputPath": "dist/ngAssignment-II/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "assignment-ng-app:build:production"
+              "browserTarget": "ngAssignment-II:build:production"
             },
             "development": {
-              "browserTarget": "assignment-ng-app:build:development"
+              "browserTarget": "ngAssignment-II:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "assignment-ng-app:build"
+            "browserTarget": "ngAssignment-II:build"
           }
         },
         "test": {
@@ -110,7 +110,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/assignment-ng-app/server",
+            "outputPath": "dist/ngAssignment-II/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -137,12 +137,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "assignment-ng-app:build:development",
-              "serverTarget": "assignment-ng-app:server:development"
+              "browserTarget": "ngAssignment-II:build:development",
+              "serverTarget": "ngAssignment-II:server:development"
             },
             "production": {
-              "browserTarget": "assignment-ng-app:build:production",
-              "serverTarget": "assignment-ng-app:server:production"
+              "browserTarget": "ngAssignment-II:build:production",
+              "serverTarget": "ngAssignment-II:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -156,12 +156,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "assignment-ng-app:build:production",
-              "serverTarget": "assignment-ng-app:server:production"
+              "browserTarget": "ngAssignment-II:build:production",
+              "serverTarget": "ngAssignment-II:server:production"
             },
             "development": {
-              "browserTarget": "assignment-ng-app:build:development",
-              "serverTarget": "assignment-ng-app:server:development"
+              "browserTarget": "ngAssignment-II:build:development",
+              "serverTarget": "ngAssignment-II:server:development"
             }
           },
           "defaultConfiguration": "production"
@@ -169,5 +169,5 @@
       }
     }
   },
-  "defaultProject": "assignment-ng-app"
+  "defaultProject": "ngAssignment-II"
 }
