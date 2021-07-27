@@ -1,21 +1,17 @@
 {
   "name": "assignment-ng-app",
   "version": "0.0.0",
-  "engines": {
-    "node": "14.x",
-    "npm": "6.x"
-  },
   "scripts": {
     "ng": "ng",
-    "start": "npm run serve:ssr",
+    "start": "ng serve:ssr",
     "client": "npm start",
-    "build": "npm run build:ssr",
-    "test": "ng test",
+    "build": "ng build:ssr",
     "watch": "ng build --watch --configuration development",
+    "test": "ng test",
     "dev": "concurrently \"npm run client\" \"npm run json:server\"",
     "dev:ssr": "concurrently \"ng run assignment-ng-app:serve-ssr\" \"npm run json:server\"",
     "serve:ssr": "node dist/assignment-ng-app/server/main.js",
-    "build:ssr": "ng build --prod && ng run assignment-ng-app:server:production",
+    "build:ssr": "ng build && ng run assignment-ng-app:server",
     "json:server": "json-server --watch db.json",
     "prerender": "ng run assignment-ng-app:prerender"
   },
@@ -44,7 +40,6 @@
     "ng2-search-filter": "^0.5.1",
     "ngx-pagination": "^5.1.1",
     "rxjs": "~6.6.0",
-    "save": "^2.4.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
