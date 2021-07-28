@@ -19,7 +19,7 @@ export class CategoriesComponent implements OnInit {
   products: Product[] = PRODUCTS;
   mySelect: string;
   selectedValue: Product[] = [];
-  notification: number = 0;
+  addCart: number = 0;
 
   priceFilter = ['Sorting by Lowest Price', 'Sorting by Highest Price', 'Sorting by Highest Discount', 'Sorting by Highest Rating', 'Sorting by Default']; 
 
@@ -37,8 +37,8 @@ export class CategoriesComponent implements OnInit {
     this.layoutStyle = 'product-list'
   }
 
-  addCart() {
-    this.notification = this.notification + 1;
+  addCartFun() {
+    this.addCart = this.addCart + 1;
   }
 
   selectChange(val: any) {

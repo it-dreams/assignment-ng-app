@@ -9,3 +9,28 @@
 
 // Impoerting global scss file.
 @import './assets/scss/global.scss';
+
+
+// Cart Notification 
+.notification-section {
+	margin: 20px 10px 10px 10px;
+	border-radius: 7px;
+	.cart-section {
+		position: relative;
+		display: inline-block;
+		border-radius: 2px;
+		.fa-shopping-cart {
+			font-size: 39px;
+			color: orange;
+		}
+		.badge {
+			position: absolute;
+			top: -10px;
+			right: -10px;
+			padding: 5px 10px;
+			border-radius: 50%;
+			background-color: red;
+			color: white;
+		}
+	}
+}

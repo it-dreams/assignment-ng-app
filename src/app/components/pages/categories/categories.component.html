@@ -3,9 +3,9 @@
         <div class="col-md-12">
             <div class="row justify-content-end">    
                 <div class="notification-section">
-                    <div class="notification">
+                    <div class="cart-section">
                         <span class="fa fa-shopping-cart"></span>
-                        <span class="badge">{{notification}}</span>
+                        <span class="badge">{{addCart}}</span>
                     </div>
                 </div>
                 <div class="product-view">
@@ -37,7 +37,7 @@
                             <app-rating [rating]='item.rating'></app-rating> <strong>{{item.rating}}</strong>
                         </div>
                         <app-button text="Add to Cart" 
-                        [btnClass]="btnStyle" [iconClass]="'fa fa-shopping-cart'" (btnClick)="addCart()"></app-button>
+                        [btnClass]="btnStyle" [iconClass]="'fa fa-shopping-cart'" (btnClick)="addCartFun()"></app-button>
                     </div>
                 </div>              
             </div>

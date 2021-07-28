@@ -1,31 +1,5 @@
 @import '../../../../assets/scss/global.scss';
 
-.notification-section {
-    margin: 20px 10px 10px 10px;
-    border-radius: 7px;
-    
-    .notification {
-        position: relative;
-        display: inline-block;
-        border-radius: 2px;
-
-        span.fa-shopping-cart {
-            font-size: 39px;
-            color: orange;
-        }
-        
-        .badge {
-          position: absolute;
-          top: -10px;
-          right: -10px;
-          padding: 5px 10px;
-          border-radius: 50%;
-          background-color: red;
-          color: white;
-        }
-      }
-      
-}
 .product-view {
     margin: $mediam $small $small $small; 
     background-color:orange;
@@ -201,11 +175,6 @@
             img {
                 width: 114px !important;
             }
-        }
-    }
-    .price-filter {    
-        #mySelect {
-            width: 175px;
         }
     }
 }
