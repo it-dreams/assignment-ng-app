@@ -19,10 +19,9 @@ export class CategoriesComponent implements OnInit {
   products: Product[] = PRODUCTS;
   mySelect: string;
   selectedValue: Product[] = [];
+  notification: number = 0;
 
-  // priceFilter = ['$0 - $500', '$501 - $1000', '$1001 - $1500', '$1501 - $2000', '$2001 - $2500', '$2501 - $3000', '$3001 - $3500', '$3501 - $4000', '$4001 - $4500', '$4501 - $5000'];
   priceFilter = ['Sorting by Lowest Price', 'Sorting by Highest Price', 'Sorting by Highest Discount', 'Sorting by Highest Rating', 'Sorting by Default']; 
-  // priceFilter = this.products.map(x => x.price +'-'+ (x.price + 500));
 
 
   constructor() { }
@@ -39,14 +38,14 @@ export class CategoriesComponent implements OnInit {
   }
 
   addCart() {
-    console.log('Add');
+    this.notification = this.notification + 1;
   }
 
-  selectChange(val) {
+  selectChange(val: any) {
     this.applyFilter(val.target.options.selectedIndex)
   }
 
-  applyFilter(i) {
+  applyFilter(i: any) {
     console.log(i);
     switch(i) { 
       case 1: { 
