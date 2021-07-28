@@ -2,12 +2,12 @@
     <h3>Timer App</h3>
     
     <div class="row">
-        <div class="col-lg-5 col-md-12 col-sm-12">
+        <div class="col-lg-5 col-md-12">
             <div class="count-down">
                 <app-count-down [initialCountDown]="currentTimer"></app-count-down>
             </div>                      
         </div>
-        <div class="col-lg-7 col-md-12 col-sm-12">
+        <div class="col-lg-7 col-md-12">
             <div class="timer-control">
                 <app-timer-control (start)="changeState()" (reset)="resetState()" [timerState]="initialState" [pausedValue]="pausedTime" (updatedValue)=setLimit($event)></app-timer-control>
             </div>

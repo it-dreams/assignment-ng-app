@@ -2,10 +2,10 @@
     <div class="row">
         <div class="col-md-10 ">
             <div class="row set-limit">
-                <div class="col-md-4">
-                    <label for="">Enter Timer Limit</label>
+                <div class="col-lg-4 col-md-6">
+                    <label for="">Enter Limit</label>
                 </div>
-                <div class="col-md-8">                        
+                <div class="col-lg-8 col-md-6">                        
                     <form>
                         <!-- <app-input type="text" [(ngModel)]="name" (keyup)="setTimerLimit()" [ngModelOptions]="{standalone: true}" placeholder="Enter Timer Limit"></app-input> -->
 
@@ -14,8 +14,8 @@
                 </div>
             </div> 
             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-8 start-stop">
+                <div class="col-lg-4 col-md-6"></div>
+                <div class="col-lg-8 col-md-6 start-stop">
                     <app-button backgroundColor="green" color="white" [text]="timerState" (btnClick)= "clickStart()" [btnClass]="'start-timer'" [disabled]="isDisabled"></app-button>
                     <app-button backgroundColor="red" color="white" text="Reset" (btnClick)="clickReset()"></app-button>
                 </div>
