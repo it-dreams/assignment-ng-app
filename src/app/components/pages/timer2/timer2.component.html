@@ -14,20 +14,20 @@
         </div>
     </div>
     
-    <div class="row">
-        <div class="col-md-5">
+    <div class="timer-history">
+        <div class="column">
             <div class="timer-logs">
-                <span *ngFor="let item of latestDate">Started at  {{item | date: 'dd-MM-yy h:mm:ss a'}}</span>
+                <span *ngFor="let item of latestDate">Started at {{ item | date: 'dd-MM-yy h:mm:ss a'}}</span>
             </div>
         </div>
-        <div class="col-md-7">
+        <div class="column">
             <div class="control-history">
                 <div class="started">
-                    <span> {{startCount}} </span>
+                    <span>{{ startCount }}</span>
                     <span>Started</span>
                 </div>
                 <div class="paused">
-                    <span>{{pausedCount}}</span>
+                    <span>{{ pausedCount }}</span>
                     <span>Paused</span>
                 </div>
             </div>

@@ -9,7 +9,7 @@ import { Timer2Service } from 'src/app/services/timer2.service';
 })
 export class CountDownTimerComponent implements OnInit {
 
-  initialCountDown: number = 100;
+  initialCountDown: number = 1000;
 
   constructor(private _timerService: Timer2Service) { }
 

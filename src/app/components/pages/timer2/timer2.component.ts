@@ -19,11 +19,14 @@ export class Timer2Component implements OnInit {
   interval: any;
   initialState = 'Start' || 'Pause';
 
-  constructor(private _timerService: Timer2Service) { }
+  constructor(private _timerService: Timer2Service) { 
+    this.currentTimer = this.initialTimer;
+  }
 
   ngOnInit() {
     this._timerService.setLimitSubject.subscribe(res => {
       this.initialTimer = res;
+      this.currentTimer = this.initialTimer;
     });
     this._timerService.startTimerSubject.subscribe(res => {
       this.changeState();
@@ -41,34 +44,32 @@ export class Timer2Component implements OnInit {
         this.latestDate.unshift(new Date());
       } else {
         this.startCount;
+        this._timerService.RunningTimerSubject.next(this.currentTimer);
       }
     } else if(this.initialState == 'Pause') {
       this.pauseTimer();      
       this.pausedCount = this.pausedCount +1 ;
       this.pausedTime.unshift(this.currentTimer);
       this._timerService.pausedHistorySubject.next(this.pausedTime);
+      this._timerService.RunningTimerSubject.next(this.currentTimer);
     } else {
       this.startTimer();    
       this.startCount = this.startCount +1;
       this.latestDate.unshift(new Date());
-    }    
-    this._timerService.timerStateSubject.next(this.initialState);
-    this._timerService.RunningTimerSubject.next(this.currentTimer);
+    }
   }
 
   startTimer() {
-    this.currentTimer = this.initialTimer;
     this.pauseTimer();
     this.interval = setInterval(() => { 
       if (this.currentTimer > 0) {
         this.currentTimer = this.currentTimer - 1;
         this.initialState = 'Pause';
         this._timerService.timerStateSubject.next(this.initialState);
+        this._timerService.RunningTimerSubject.next(this.currentTimer);
       } else {
         this.initialState = 'Start';
-        this._timerService.timerStateSubject.next(this.initialState);
       }
-      this._timerService.RunningTimerSubject.next(this.currentTimer);
     }, 1000);
   }
   

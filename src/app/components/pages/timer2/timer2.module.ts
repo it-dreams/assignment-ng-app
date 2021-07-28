@@ -6,10 +6,9 @@ import { TimerControllerComponent } from './timer-controller/timer-controller.co
 
 @NgModule({
   declarations: [
-    // Timer2Component
-  
-    CountDownTimerComponent,
-    TimerControllerComponent
+    // Timer2Component  
+    // CountDownTimerComponent,
+    // TimerControllerComponent
   ],
   imports: [
     CommonModule
