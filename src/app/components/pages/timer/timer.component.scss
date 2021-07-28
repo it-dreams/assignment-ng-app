@@ -64,3 +64,63 @@
         }
     }
 }
+
+// Media Queries
+
+// Mobile devices
+@media (max-width: 575px) {
+    .count-down {
+        height: unset !important;
+        padding: 0 20px !important;
+        margin-bottom: 5% !important;
+    }
+    .timer-control {
+        height: auto !important;
+        text-align: center;
+    }
+    .timer-history {
+        display: flex;
+        flex-direction: column-reverse !important;
+    
+        .column {
+            width: 100% !important;
+
+            .control-history{
+                padding: 20px 0;
+            }
+        }
+    }
+}
+
+// Mobile devices
+@media (min-width: 576px) and (max-width: 700px) {
+    .count-down {
+        height: unset !important;
+        padding: 0 20px !important;
+        margin-bottom: 5% !important;
+    }
+    .timer-history {
+        display: flex;
+        flex-direction: column-reverse !important;
+    
+        .column {
+            width: 100% !important;
+        }
+    }
+}
+
+// Tablet Devices
+@media (min-width: 701px) and (max-width: 767px){
+    .count-down {
+        height: unset !important;
+        padding: 0 20px !important;
+        margin-bottom: 5% !important;
+    }
+}
+
+// Desktop Devices
+@media (min-width: 768px) and (max-width: 991px){
+    .count-down {
+        margin-bottom: 5%;
+    }
+}
