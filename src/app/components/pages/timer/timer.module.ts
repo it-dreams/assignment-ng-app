@@ -5,13 +5,10 @@ import { RouterModule } from '@angular/router';
 import { TimerComponent } from './timer.component';
 import { CountDownComponent } from './count-down/count-down.component';
 import { TimerControlComponent } from './timer-control/timer-control.component';
-// import { ButtonComponent } from '../../core/button/button.component';
-// import { InputComponent } from '../../core/input/input.component';
+import { CoreModule } from '../../core/core-module.module';
 
 @NgModule({
   declarations: [
-    // ButtonComponent,
-    // InputComponent,
     TimerComponent,
     CountDownComponent,
     TimerControlComponent
@@ -19,7 +16,8 @@ import { TimerControlComponent } from './timer-control/timer-control.component';
   imports: [
     CommonModule,
     RouterModule.forChild([{ path: '', component: TimerComponent }]),
-    FormsModule
+    FormsModule,
+    CoreModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

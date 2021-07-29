@@ -1,22 +1,26 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { CategoriesComponent } from './categories.component';
-// import { ButtonComponent } from '../../core/button/button.component';
-// import { ImageComponent } from '../../core/image/image.component';
+import { RouterModule } from '@angular/router';
+import { CategoriesComponent } from './categories.component';
 import { RatingComponent } from './rating/rating.component';
+import { CoreModule } from '../../core/core-module.module';
 
 @NgModule({
   declarations: [
-    // CategoriesComponent,
-    // ButtonComponent,
-    // ImageComponent,  
+    CategoriesComponent,
     RatingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([{ path: '', component: CategoriesComponent }]),
+    CoreModule
   ],
   schemas: [ 
     CUSTOM_ELEMENTS_SCHEMA 
   ]
 })
-export class CategoriesModule { }
+export class CategoriesModule { 
+  constructor() {
+    console.log('Category module')
+  }
+}

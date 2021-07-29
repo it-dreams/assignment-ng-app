@@ -4,16 +4,17 @@ import { DynamicClickComponent } from './dynamic-click.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from '../../core/button/button.component';
+import { CoreModule } from '../../core/core-module.module';
 
 @NgModule({
   declarations: [
-    DynamicClickComponent,
-    // ButtonComponent
+    DynamicClickComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([{ path: '', component: DynamicClickComponent }]),
-    ScrollingModule
+    ScrollingModule,
+    CoreModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

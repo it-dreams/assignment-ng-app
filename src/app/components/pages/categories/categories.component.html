@@ -14,8 +14,8 @@
                 </div>
                 <div class="price-filter">
                     <select id="mySelect" (change)="selectChange($event)">
-                        <option [ngValue]="0">Select Sorting Option...</option>
-                        <option *ngFor="let item of priceFilter" [ngValue]="item">{{item}}</option>
+                        <option [value]="0">Select Sorting Option...</option>
+                        <option *ngFor="let item of priceFilter" [value]="item">{{item}}</option>
                     </select>
                 </div>                       
             </div>

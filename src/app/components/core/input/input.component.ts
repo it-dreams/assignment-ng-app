@@ -11,7 +11,7 @@ export class InputComponent implements OnInit {
   @Input() type: string;
   @Input() name: string;
   @Input() value: string;
-  @Input() ngModel: number;
+  @Input() ngModel: string;
   @Input() placeholder: string;
   @Input() inputStyle: string;
 
