@@ -9,8 +9,7 @@ import { RatingComponent } from './rating/rating.component';
   declarations: [
     // CategoriesComponent,
     // ButtonComponent,
-    // ImageComponent
-  
+    // ImageComponent,  
     RatingComponent
   ],
   imports: [

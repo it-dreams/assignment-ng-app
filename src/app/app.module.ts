@@ -8,6 +8,13 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { HomeModule } from './components/pages/home/home.module';
+import { CategoriesModule } from './components/pages/categories/categories.module';
+import { TimerModule } from './components/pages/timer/timer.module';
+import { Timer2Module } from './components/pages/timer2/timer2.module';
+import { StudentsModule } from './components/pages/students/students.module';
+import { DynamicClickModule } from './components/pages/dynamic-click/dynamic-click.module';
+import { PageNotFoundModule } from './components/pages/page-not-found/page-not-found.module';
 
 // Components
 import { AppComponent } from './app.component';
@@ -37,14 +44,39 @@ import { DiscountPipe } from './pipe/discount.pipe';
 import { Timer2Service } from './services/timer2.service';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'category', component: CategoriesComponent },
-  { path: 'timer1', component: TimerComponent },
-  { path: 'timer2', component: Timer2Component },
-  { path: 'students', component: StudentsComponent },
-  { path: 'dynamicClick', component: DynamicClickComponent },
-  { path: '**', component: PageNotFoundComponent },
+  { 
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  { 
+    path: 'home',
+    loadChildren: () => import('./components/pages/home/home.module').then(m => m.HomeModule) 
+  },
+  { 
+    path: 'category', 
+    loadChildren: () => import('./components/pages/categories/categories.module').then(m => m.CategoriesModule)   
+  },
+  { 
+    path: 'timer1', 
+    loadChildren: () => import('./components/pages/timer/timer.module').then(m => m.TimerModule) 
+  },
+  { 
+    path: 'timer2', 
+    loadChildren: () => import('./components/pages/timer2/timer2.module').then(m => m.Timer2Module) 
+  },
+  { 
+    path: 'students', 
+    loadChildren: () => import('./components/pages/students/students.module').then(m => m.StudentsModule) 
+  },
+  { 
+    path: 'dynamicClick', 
+    loadChildren: () => import('./components/pages/dynamic-click/dynamic-click.module').then(m => m.DynamicClickModule) 
+  },
+  { 
+    path: '**', 
+    loadChildren: () => import('./components/pages/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) 
+  },
  ];
 
 @NgModule({
@@ -55,31 +87,38 @@ const routes: Routes = [
     ButtonComponent,
     ImageComponent,
     InputComponent,
-    HomeComponent,
-    CategoriesComponent,
-    RatingComponent,
-    TimerComponent,
-    CountDownComponent,
-    TimerControlComponent,
-    Timer2Component,
-    CountDownTimerComponent,
-    TimerControllerComponent,
-    StudentsComponent,
-    DynamicClickComponent,
-    PageNotFoundComponent,
+    // HomeComponent,
+    // CategoriesComponent,
+    // RatingComponent,
+    // TimerComponent,
+    // CountDownComponent,
+    // TimerControlComponent,
+    // Timer2Component,
+    // CountDownTimerComponent,
+    // TimerControllerComponent,
+    // StudentsComponent,
+    // DynamicClickComponent,
+    // PageNotFoundComponent,
     SubstringPipe, // Custom pipe
     DiscountPipe // Custom pipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    FormsModule,
-    ScrollingModule,
     RouterModule.forRoot(routes),
     NgbModule,
     HttpClientModule,
+    FormsModule,
+    ScrollingModule,
     Ng2SearchPipeModule,
     Ng2OrderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HomeModule,
+    CategoriesModule,
+    TimerModule,
+    Timer2Module,
+    StudentsModule,
+    DynamicClickModule,
+    PageNotFoundModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [Timer2Service],
